@@ -14,7 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 1, 143, 129),
+      backgroundColor: const Color.fromARGB(255, 85, 122, 166),
       body: Column(
         children: <Widget>[
           Padding(
@@ -22,8 +22,8 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text(
               'WELCOME !',
               style: TextStyle(
-                fontSize: 50.0,
-                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 38.0,
                 letterSpacing: 1.5,
               ),
             ),
@@ -31,11 +31,14 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(height: 50.0), 
           Center(
             child: Container(
-              width: MediaQuery.of(context).size.width * 0.8,
+              width: MediaQuery.of(context).size.width * 0.83,
               padding: EdgeInsets.all(12.0),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: const Color.fromARGB(255, 76, 108, 147),
                 borderRadius: BorderRadius.circular(6.0),
+                border: Border.all(
+                  color: Colors.white54
+                )
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min, 
@@ -48,12 +51,13 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Have an account?',
+                'Don\'t have an account?',
                 style: TextStyle(
-                  fontSize: 12.0, 
+                  fontSize: 10.0, 
+                  fontWeight: FontWeight.bold
                 ),
               ),
-              SizedBox(width: 5.0), 
+              SizedBox(width: 2.0), 
               GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -61,10 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                 },
                 child: Text(
-                  'Create a new account',
+                  'Create a new account.',
                   style: TextStyle(
                     fontSize: 10.0,
-                    color: const Color.fromARGB(255, 45, 33, 126), 
+                    color: const Color.fromARGB(255, 42, 26, 147), 
+                    fontWeight: FontWeight.bold,
+                    
                   ),
                 ),
               ),
@@ -108,7 +114,6 @@ class _LoginFormState extends State<LoginForm> {
             'Email',
             style: TextStyle(
               fontSize: 12.0,
-              fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(height: 5.0 ),
@@ -120,12 +125,26 @@ class _LoginFormState extends State<LoginForm> {
               style: TextStyle(fontSize: 10.0),
               decoration: InputDecoration(
                 hintText: 'Natataenako@email.com',
-                border: OutlineInputBorder(),
+                hintStyle: TextStyle(
+                  color: Colors.black38
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(7),
+                  borderSide: BorderSide(color: Colors.white)
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(7),
+                  borderSide: BorderSide(
+                    color: Colors.white
+                    ),
+                  ),
+                filled: true,
+                fillColor: Colors.white,
                 contentPadding: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 12.0,
                 ),
-            ),
+              ),
           ),
           ),
           SizedBox(height: 10.0),
@@ -133,7 +152,6 @@ class _LoginFormState extends State<LoginForm> {
             'Password',
             style: TextStyle(
               fontSize: 12.0,
-              fontWeight: FontWeight.bold,
             ),
           ),
           SizedBox(height: 5.0),
@@ -145,14 +163,29 @@ class _LoginFormState extends State<LoginForm> {
               style: TextStyle(fontSize: 10.0),
               decoration: InputDecoration(
                 hintText: 'Password',
-                border: OutlineInputBorder(),
+                hintStyle: TextStyle(
+                  color: Colors.black38,
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(7),
+                  borderSide: BorderSide(color: Colors.white)
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(7),
+                  borderSide: BorderSide(
+                    color: Colors.white
+                    ),
+                  ),
+                filled: true,
+                fillColor: Colors.white,
                 contentPadding: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 12.0,
                 ),
-              ),
-              obscureText: true,
+                
             ),
+            obscureText: true,
+          ),
           ),
           SizedBox(height: 20.0),
           SizedBox(
