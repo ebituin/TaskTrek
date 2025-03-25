@@ -102,8 +102,11 @@ class _LoginFormState extends State<LoginForm> {
     super.dispose();
   }
 
+    bool emptyText = false;
+    bool wrongPassword = false;
   @override
   Widget build(BuildContext context) {
+  
     return Form(
       key: _formKey,
       child: Column(
@@ -186,14 +189,42 @@ class _LoginFormState extends State<LoginForm> {
             ),
             obscureText: true,
           ),
+          
           ),
-          SizedBox(height: 20.0),
+            SizedBox(
+              height: 20.0,
+              
+              child:
+              Center(
+                
+                child: emptyText ?
+                  Text(
+                    'The password cannot be empty.',
+                    style: TextStyle(
+                      color: const Color(0xFFAD292B),
+                      fontSize: 10
+                    ),
+                  ):wrongPassword ?
+                  Text(
+                    'The password you’ve entered is incorrect.',
+                    style: TextStyle(
+                      color: const Color(0xFFAD292B),
+                      fontSize: 10
+                    ),
+                  ):null
+                  
+              ),
+            ),
           SizedBox(
             height: 30,
             
             child:
               ElevatedButton(
                 onPressed: () {
+                  setState(() {
+                    emptyText = _passwordController.text.isEmpty;
+                    wrongPassword = _passwordController.text != 'fetish';
+                  });
                   //Navigator.push(
                     //context,
                      //MaterialPageRoute(builder: ),
@@ -212,8 +243,13 @@ class _LoginFormState extends State<LoginForm> {
                     color: Colors.white,
                   ),
                   ),
+                  
               ),
+              
+              
           ),
+
+          
           SizedBox(height: 2),
           TextButton(
             onPressed: () {
@@ -236,8 +272,11 @@ class _LoginFormState extends State<LoginForm> {
           ),
         ],
       ),
+      
     );
+    
   }
+  
 }
 
 
