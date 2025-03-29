@@ -12,6 +12,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+      bool lostConnection   = false;
     return Scaffold(
       backgroundColor: const Color(0xFF6C96B5),
       body: Column(
@@ -45,38 +46,41 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           SizedBox(
             height: 150,
-            child: Padding(
+            child:Padding(
               padding: EdgeInsets.all(45),
-              child: Container(
-                padding: EdgeInsets.all(9),
-                decoration: BoxDecoration(
-                    color: Color(0xFFAD292B),
-                    borderRadius: BorderRadius.circular(6)),
-                child: Row(
-                  children: [
-                    //image nung wifi
-                    Text('image'),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Lost Connection!',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
+              child: Visibility(
+                visible: lostConnection,
+                child:Container(
+                  padding: EdgeInsets.all(9),
+                  decoration: BoxDecoration(
+                      color: Color(0xFFAD292B),
+                      borderRadius: BorderRadius.circular(6)),
+                  child: Row(
+                    children: [
+                      //image nung wifi
+                      Text('image'),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Lost Connection!',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
                           ),
-                        ),
-                        Text(
-                          'You are not connected to a network.',
-                          style: TextStyle(color: Colors.white, fontSize: 12),
-                        ),
-                      ],
-                    )
-                  ],
+                          Text(
+                            'You are not connected to a network.',
+                            style: TextStyle(color: Colors.white, fontSize: 12),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

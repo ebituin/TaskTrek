@@ -14,160 +14,173 @@ class _forgot_pagePageState extends State<forgot_page_2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:  const Color.fromARGB(255, 1, 143, 129),
+      backgroundColor: Color(0xFF6C96B5),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255,1,143,129),
-        actions: [
-        
-
-        ],
-
+        backgroundColor:Color(0xFF6C96B5),
       ),
       body: Center(
+        
         child: 
           Padding(
-            padding: const EdgeInsets.only(top: 70.0),
+            padding: const EdgeInsets.only(bottom: 200.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'OTP Verification',
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text(
-                  'Enter the OTP code you received in your',
-                  style: TextStyle(
-                    fontSize: 8,
-                  ),
+                SizedBox(height: 25,),
+                SizedBox(
+                  width: 240,
+                  child: Text(
+                    'Enter the OTP code you received in your phone number',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.black54
+                    ),
+                    textAlign: TextAlign.center,
                 ),
-                Text(
-                  'phone number',
-                  style: TextStyle(
-                    fontSize: 8,
-                  ),
                 ),
                 SizedBox(height: 60),
-                Padding(padding:EdgeInsets.symmetric(horizontal: 20),
-                child: 
-                Row(
-                  
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: SizedBox(
-                        height: 30.0,
-                        width: 30.0,
-                        child: TextFormField(
-                          style: TextStyle(fontSize: 10.0),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: '0',
-                            border: OutlineInputBorder(),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 10.0,
-                              horizontal: 12.0,
+                SizedBox(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          child: SizedBox(
+                            height: 38.0,
+                            width: 39.0,
+                            child: TextFormField(
+                              style: TextStyle(
+                                fontSize: 10.0,
+                                ),
+                                textAlign: TextAlign.center,
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                hintText: '0',
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(6)
+                                ),
+                                contentPadding: EdgeInsets.symmetric(
+                                  
+                                  vertical: 10.0,
+                                  horizontal: 15.0,
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(10),
+                        Container(
+                          padding: EdgeInsets.all(10),
 
-                      child: SizedBox(
-                        height: 30.0,
-                        width: 30.0,
-                        child: TextFormField(
-                          style: TextStyle(fontSize: 10.0),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: '0',
-                            border: OutlineInputBorder(),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 10.0,
-                              horizontal: 12.0,
+                          child: SizedBox(
+                            height: 38.0,
+                            width: 39.0,
+                            child: TextFormField(
+                              style: TextStyle(fontSize: 10.0),
+                              textAlign: TextAlign.center,
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                hintText: '0',
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(6)
+                                ),
+                                contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10.0,
+                                  horizontal: 12.0,
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: SizedBox(
-                        height: 30.0,
-                        width: 30.0,
-                        child: TextFormField(
-                          style: TextStyle(fontSize: 10.0),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: '0',
-                            border: OutlineInputBorder(),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 10.0,
-                              horizontal: 12.0,
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          child: SizedBox(
+                            height: 38.0,
+                            width: 39.0,
+                            child: TextFormField(
+                              style: TextStyle(fontSize: 10.0),
+                              textAlign: TextAlign.center,
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                hintText: '0',
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(6)
+
+                                ),
+                                contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10.0,
+                                  horizontal: 12.0,
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: SizedBox(
-                        height: 30.0,
-                        width: 30.0,
-                        child: TextFormField(
-                          style: TextStyle(fontSize: 10.0),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: '0',
-                            border: OutlineInputBorder(),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 10.0,
-                              horizontal: 12.0,
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          child: SizedBox(
+                            height: 38.0,
+                            width: 39.0,
+                            child: TextFormField(
+                              style: TextStyle(fontSize: 10.0),
+                              textAlign: TextAlign.center,
+                              decoration: InputDecoration(
+                                filled: true,
+                                fillColor: Colors.white,
+                                hintText: '0',
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(6)
+                                ),
+                                contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10.0,
+                                  horizontal: 12.0,
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: SizedBox(
-                        height: 30.0,
-                        width: 30.0,
-                        child: TextFormField(
-                          style: TextStyle(fontSize: 10.0),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: '0',
-                            border: OutlineInputBorder(),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 10.0,
-                              horizontal: 12.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),),
-                SizedBox(height: 4),
-                Text(
-                  'This account will receive an OTP code on their phone number.',
-                  style: TextStyle(
-                    fontSize: 7,
                   ),
-                ),
-                SizedBox(height: 30),
-                Padding(padding: EdgeInsets.symmetric(horizontal: 70),
-                  child: 
-                    ElevatedButton(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                      'Didn\’t receive an OTP code?',
+                      style: TextStyle(
+                        fontSize: 12,
+                      ),
+                      ),
+                      TextButton(
+                        onPressed:() {
+                          
+                        },
+                        child: Text(
+                          'Resend OTP',
+                          style: TextStyle(
+                            fontSize:12,
+                            color: Colors.black54,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline,
+                            decorationThickness: 1.4
+                          ),
+                          )
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 30),
+                  SizedBox(
+                    height: 44,
+                    width: 286,
+                    child: ElevatedButton(
                       onPressed: (){
                         Navigator.push(
                           context,
@@ -179,15 +192,17 @@ class _forgot_pagePageState extends State<forgot_page_2> {
                         iconColor: Colors.black,
                         minimumSize: Size(double.infinity, 20),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                        backgroundColor: Colors.black,
+                        backgroundColor: Color(0xFF131415),
                       ),
                       child: Text(
                         'Verify',
                         style: TextStyle(
                           color: Colors.white,
                         ),
-                        ),)
-                ),
+                      ),
+                    ),
+                  ),
+                      
               ],
             ),
           ),

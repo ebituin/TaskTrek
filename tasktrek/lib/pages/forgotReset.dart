@@ -15,136 +15,155 @@ class _forgot_ResetPageState extends State<forgot_Reset> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:  const Color.fromARGB(255, 1, 143, 129),
+      backgroundColor: Color(0xFF6C96B5),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255,1,143,129),
-        actions: [
-        
-
-        ],
-
+        backgroundColor:Color(0xFF6C96B5),
       ),
       body: Center(
         child: 
           Padding(
-            padding: const EdgeInsets.only(top: 70.0),
+            padding: const EdgeInsets.only(bottom: 200.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'Reset Password',
                   style: TextStyle(
-                    fontSize: 17,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(height: 60),
+
                 Column(
                   children: [
                     Container(
                       alignment: Alignment.topLeft,
                       padding: EdgeInsets.symmetric(horizontal: 50),
-                      child: Column(
+                      child: Row(
                         children: [
+                          SizedBox(width: 38,),
                           Text(
                             'New Password',
                             style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
                             ),
                           ),
                         ],
-                      )
-                    ),
-                    SizedBox(height: 5),
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
-                      child:  SizedBox(
-                        height: 30.0,
-                        width: 300.0,
-                        child: TextFormField(
-                          style: TextStyle(fontSize: 10.0),
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: 'Natataenako@email.com',
-                            border: OutlineInputBorder(),
-                            contentPadding: EdgeInsets.symmetric(
-                              vertical: 10.0,
-                              horizontal: 12.0,
-                            ),
-                          ),
-                        ),
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 5),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 38,
+                          width: 38,
+                          child: Text(
+                            'img',
+                            textAlign: TextAlign.center),
+                        ),
+                        SizedBox(
+                          height: 38.0,
+                          width: 258,
+                          child: TextFormField(
+                            style: TextStyle(fontSize: 14.0),
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Colors.white,
+                              hintText: 'Natataenako@email.com',
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(6)
+                              ),
+                              contentPadding: EdgeInsets.symmetric(
+                                vertical: 10.0,
+                                horizontal: 12.0,
+                              ),
+                              
+                            ),
+                            obscureText: true,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 30),
                     Container(
                       alignment: Alignment.topLeft,
                       padding: EdgeInsets.symmetric(horizontal: 50),
-                      child: Column(
+                      child: Row(
                         children: [
+                          SizedBox(width: 44,),
                           Text(
                             'Confirm New Password',
                             style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
                             ),
                           ),
                         ],
-                      )
+                      ),
                     ),
-                    SizedBox(height: 5),
-                    Container(
-                      padding: EdgeInsets.symmetric(horizontal: 40),
-                      child:  SizedBox(
-                        height: 30.0,
-                        width: 300.0,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 38,
+                          width: 38,
+                          child: Text(
+                            'img',
+                            textAlign: TextAlign.center,
+                            ),
+                        ),
+                        SizedBox(
+                        height: 38.0,
+                        width: 258,
                         child: TextFormField(
-                          style: TextStyle(fontSize: 10.0),
+                          style: TextStyle(fontSize: 14.0),
                           decoration: InputDecoration(
                             filled: true,
                             fillColor: Colors.white,
                             hintText: 'Natataenako@email.com',
-                            border: OutlineInputBorder(),
+                            
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(6)
+                            ),
                             contentPadding: EdgeInsets.symmetric(
                               vertical: 10.0,
                               horizontal: 12.0,
                             ),
                           ),
+                          obscureText: true,
                         ),
                       ),
-                    ),
-
+                      ],
+                      ),
                   ],
                 ),
-                SizedBox(height: 4),
                 SizedBox(height: 30),
                 SizedBox(
-                  child:
-                    
-                    Padding(
-                      padding:EdgeInsets.symmetric(horizontal: 70),
-                      child: Column(
-                        children: [
-                          ElevatedButton(
-                            onPressed: (){
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => MyHomePage(),
-                                ),
-                              );
-                            },
-                            style: ElevatedButton.styleFrom(
-                                    iconColor: Colors.black,
-                                    minimumSize: Size(double.infinity, 20),
-                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                                    backgroundColor: Colors.black,
-                                  ),
-                            child: Text('Reset Password'),)
-                        ],
-                      ),
-                    ),
-                    
-                )
+                  width: 286,
+                  height: 43,
+                  child: ElevatedButton(
+                        onPressed: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => MyHomePage(),
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                                iconColor: Colors.black,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                                backgroundColor:Color(0xFF131415),
+                              ),
+                        child: Text(
+                          'Reset Password',
+                          style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.white
+                          ),
+                        ),
+                  ),
+                ),
               ],
             ),
           ),
