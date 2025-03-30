@@ -33,7 +33,16 @@ class _forgot_pagePageState extends State<forgot_page> {
                     children: [
                       Column(
                         children: [
-                          Text('Image'),
+                          SizedBox(
+                          height: 15,
+                          width: 15,
+                          child: Opacity(
+                            opacity: 0.8,
+                            child: Image.asset(
+                            'lib/assets/images/user.png',
+                          ),
+                          ),
+                        ),
                           SizedBox(height: 10,)
                         ],
                         
@@ -109,10 +118,10 @@ class _forgot_pagePageState extends State<forgot_page> {
                                 );
                               },
                               style: ElevatedButton.styleFrom(
-                                      iconColor: Colors.black,
+                                      iconColor: Color(0xFF262629),
                                       minimumSize: Size(double.infinity, 20),
                                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-                                      backgroundColor:Color(0xFF131415),
+                                      backgroundColor:Colors.black,
                                     ),
                               child: Text(
                                 'Send OTP',

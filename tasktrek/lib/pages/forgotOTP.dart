@@ -191,8 +191,8 @@ class _forgot_pagePageState extends State<forgot_page_2> {
                       style: ElevatedButton.styleFrom(
                         iconColor: Colors.black,
                         minimumSize: Size(double.infinity, 20),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                        backgroundColor: Color(0xFF131415),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+                        backgroundColor: Colors.black,
                       ),
                       child: Text(
                         'Verify',
