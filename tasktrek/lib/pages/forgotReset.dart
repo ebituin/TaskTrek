@@ -57,12 +57,16 @@ class _forgot_ResetPageState extends State<forgot_Reset> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: 38,
-                          width: 38,
-                          child: Text(
-                            'img',
-                            textAlign: TextAlign.center),
+                          height: 15,
+                          width: 15,
+                          child: Opacity(
+                            opacity: 0.8,
+                            child: Image.asset(
+                            'lib/assets/images/padlock.png',
+                          ),
+                          ),
                         ),
+                        SizedBox(width: 5,),
                         SizedBox(
                           height: 38.0,
                           width: 258,
@@ -104,15 +108,19 @@ class _forgot_ResetPageState extends State<forgot_Reset> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      
                       children: [
                         SizedBox(
-                          height: 38,
-                          width: 38,
-                          child: Text(
-                            'img',
-                            textAlign: TextAlign.center,
-                            ),
+                          height: 15,
+                          width: 15,
+                          child: Opacity(
+                            opacity: 0.8,
+                            child: Image.asset(
+                            'lib/assets/images/padlock.png',
+                          ),
+                          ),
                         ),
+                        SizedBox(width: 5,),
                         SizedBox(
                         height: 38.0,
                         width: 258,
@@ -153,7 +161,7 @@ class _forgot_ResetPageState extends State<forgot_Reset> {
                         style: ElevatedButton.styleFrom(
                                 iconColor: Colors.black,
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                                backgroundColor:Color(0xFF131415),
+                                backgroundColor:Colors.black,
                               ),
                         child: Text(
                           'Reset Password',

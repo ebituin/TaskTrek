@@ -253,7 +253,7 @@ class _LoginFormState extends State<LoginForm> {
                       minimumSize: Size(double.infinity, 50),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5)),
-                      backgroundColor: const Color.fromARGB(255, 44, 44, 44),
+                      backgroundColor: Colors.black,
                     ),
                     child: Text(
                       'Sign In',
