@@ -142,12 +142,18 @@ class _LoginFormState extends State<LoginForm> {
     super.dispose();
   }
 
-  void passwordVisibilitySate(){
+  void passwordVisibilityState(){
     setState(() {
       _obscureText = !_obscureText;
     });
   }
-
+  void passwordState(){
+    setState(() {
+      emptyText = !emptyText;
+      wrongPassword = !wrongPassword;
+    });
+  }
+  
   bool emptyText = false;
   bool wrongPassword = false;
   bool _obscureText = true;
@@ -213,7 +219,7 @@ class _LoginFormState extends State<LoginForm> {
                       ),
                       suffixIcon: IconButton(
                         icon: Icon(_obscureText ? Icons.visibility_off : Icons.visibility),
-                        onPressed: passwordVisibilitySate,
+                        onPressed: passwordVisibilityState,
                         
                       ),
                       
@@ -239,8 +245,7 @@ class _LoginFormState extends State<LoginForm> {
                 SizedBox(
                   height: 25.0,
                   child: Center(
-                      child: emptyText
-                          ? Text(
+                      child: emptyText ? Text(
                               'The password cannot be empty.',
                               style: TextStyle(
                                   color: const Color(0xFFAD292B), fontSize: 12),

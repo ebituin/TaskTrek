@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tasktrek/pages/forgotpage.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key, required this.title});
