@@ -127,6 +127,9 @@ class LoginForm extends StatefulWidget {
   _LoginFormState createState() => _LoginFormState();
 }
 
+
+
+
 class _LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
@@ -139,8 +142,16 @@ class _LoginFormState extends State<LoginForm> {
     super.dispose();
   }
 
+  void passwordVisibilitySate(){
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
   bool emptyText = false;
   bool wrongPassword = false;
+  bool _obscureText = true;
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -200,6 +211,12 @@ class _LoginFormState extends State<LoginForm> {
                       hintStyle: TextStyle(
                         color: Colors.black38,
                       ),
+                      suffixIcon: IconButton(
+                        icon: Icon(_obscureText ? Icons.visibility_off : Icons.visibility),
+                        onPressed: passwordVisibilitySate,
+                        
+                      ),
+                      
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(7),
                           borderSide: BorderSide(color: Colors.white)),
@@ -207,6 +224,7 @@ class _LoginFormState extends State<LoginForm> {
                         borderRadius: BorderRadius.circular(7),
                         borderSide: BorderSide(color: Colors.white),
                       ),
+                      
                       filled: true,
                       fillColor: Colors.white,
                       contentPadding: EdgeInsets.symmetric(
@@ -214,8 +232,9 @@ class _LoginFormState extends State<LoginForm> {
                         horizontal: 12.0,
                       ),
                     ),
-                    obscureText: true,
+                    obscureText: _obscureText,
                   ),
+                  
                 ),
                 SizedBox(
                   height: 25.0,
@@ -241,7 +260,7 @@ class _LoginFormState extends State<LoginForm> {
                     onPressed: () {
                       setState(() {
                         emptyText = _passwordController.text.isEmpty;
-                        wrongPassword = _passwordController.text != 'fetish';
+                        wrongPassword = _passwordController.text != 'PenPineappleApplePen';
                       });
                       //Navigator.push(
                       //context,
